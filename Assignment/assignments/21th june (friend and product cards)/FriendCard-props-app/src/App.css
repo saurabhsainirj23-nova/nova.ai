@@ -1,0 +1,30 @@
+.app {
+  text-align: center;
+  padding: 40px;
+}
+
+.friends-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px;
+  margin: 80px;
+}
+
+.friend-card {
+  background-color: greenyellow;
+  border-radius: 12px;
+  padding: 60px;
+  width: 250px;
+  box-shadow: 5px 4px 8px rgba(223, 21, 21);
+  text-align: center;
+  margin: 60px;
+}
+
+.friend-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  margin-bottom: 10px;
+}

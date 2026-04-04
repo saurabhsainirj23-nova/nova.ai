@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zay Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.top-bar {
+  background: #343a40;
+  color: white;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+
+.navbar {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 70px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #28a745;
+}
+
+.nav-font {
+  gap: 40px;
+}
+
+
+.slider {
+  margin: 40px 0;
+  position: relative;
+}
+
+.slider-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 10px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.caption {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  padding: 20px;
+  max-width: 400px;
+}
+
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #10d55c;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+
+.categories {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.categories h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.categories p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.category {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 200px;
+}
+
+.category img {
+  width: 100%;
+  border-radius: 70px;
+}
+
+.category h4 {
+  margin-top: 10px;
+}
+
+.category button {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.category button:hover {
+  background: #218838;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+}
+
+
+.featured {
+  padding: 60px 20px;
+  background: #d1faff;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.featured p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product {
+  background: white;
+  max-width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+}
+
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.stars i {
+  color: #f9c40f;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.product h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.product p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.reviews {
+  font-size: 13px;
+  color: #888;
+  margin-top: 5px;
+  padding-left: 2px;
+}
+
+.productr {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+  padding-left: 15px;
+}
+
+
+.footer {
+  background: #343a40;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer .container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-content div {
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+
+.footer-content h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #28a745;
+}
+
+.footer-content p,
+.footer-content li {
+  font-size: 14px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 5px;
+}
+
+.split-hr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.split-hr span {
+  flex: 1;
+  height: 1px;
+  background: black;
+  margin: 0 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+form {
+  width: 600px;
+  height: 20px;
+  background: #041225;
+  padding: 20px;
+}
+
+fieldset {
+  border: 1px solid #041225;
+  padding: 15px;
+  justify-content: flex-end;
+}
+
+label {
+  font-size: 14px;
+  background: #041225;
+}
+
+.email-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: lightgreen;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.email-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.footer-bottom {
+  background: #041225;
+  color: #473c3c;
+  text-align: left;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="container">
+      <span><i class="fa fa-envelope"></i> info@company.com</span>
+      <span><i class="fa fa-phone"></i> 010-020-0340</span>
+      <span><i class="fab fa-instagram"></i></span>
+      <span><i class="fa-brands fa-facebook"></i></span>
+      <span><i class="fab fa-linkedin"></i></span>
+    </div>
+  </header>
+
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo"><img src="apple-icon.png" alt="apple-icon" /></div>
+      <ul class="nav-links">
+        <li><a href="#sliderSection">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-font">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-user"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="slider" id="sliderSection">
+    <div class="slider-intro"></div>
+
+    <i class="fa-solid fa-angle-left slider-arrow left-arrow" id="arrowLeft"></i>
+    <i class="fa-solid fa-angle-right slider-arrow right-arrow" id="arrowRight"></i>
+
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide">
+        <img src="banner_img_01.jpg" alt="banner_img_01" />
+        <div class="caption">
+          <h2>Excepteur sint occaecat</h2>
+          <p>Please do not re-distribute this template on other template sites.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="banner_img_02.jpg" alt="banner_img_02" />
+        <div class="caption">
+          <h2>Proident occaecat</h2>
+          <p>Aliquip ex ea commodo consequat. You can use this template for your website. You are permitted to use this Zay CSS template for your commercial websites. You are not permitted to re-distribute the template ZIP file in any kind of template collection websites.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="banner_img_03.jpg" alt="banner_img_03" />
+        <div class="caption">
+          <h2>Tempor incididunt</h2>
+          <p>You are allowed to use this for personal or commercial projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="categories">
+    <div class="container">
+      <h2>Categories of The Month</h2>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="category-list">
+        <div class="category">
+          <img src="category_img_01.jpg" alt="category_img_01" />
+          <h4>Watches</h4>
+          <button>Go Shop</button>
+        </div>
+        <div class="category">
+          <img src="category_img_02.jpg" alt="category_img_02" />
+          <h4>Shoes</h4>
+          <button>Go Shop</button>
+        </div>
+        <div class="category">
+          <img src="category_img_03.jpg" alt="category_img_03" />
+          <h4>Accessories</h4>
+          <button>Go Shop</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="featured">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+      <div class="product-list">
+        <div class="product">
+          <img src="feature_prod_01.jpg" alt="feature_prod_01" />
+          <div class="product-top">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price">$240.00</div>
+          </div>
+          <h4>Gym Weight</h4>
+          <p>Good quality gym weights for daily workouts.</p>
+          <div class="reviews">Reviews (24)</div>
+        </div>
+
+        <div class="product">
+          <img src="feature_prod_02.jpg" alt="feature_prod_02" />
+          <div class="product-top">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price">$480.00</div>
+          </div>
+          <h4>Cloud Nike Shoes</h4>
+          <p>Comfortable shoes for running and everyday use.</p>
+          <div class="reviews">Reviews (48)</div>
+        </div>
+
+        <div class="product">
+          <img src="feature_prod_03.jpg" alt="feature_prod_03" />
+          <div class="product-top">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price">$360.00</div>
+          </div>
+          <h4>Adidas Summer Shoes</h4>
+          <p>Lightweight and stylish shoes for summer season.</p>
+          <div class="reviews">Reviews (74)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h3>Zay Shop</h3>
+        <div class="split-hr"><span></span></div>
+        <p><i class="fa fa-map-marker-alt"></i> 123 Consectetur, Ligula 10660</p>
+        <p><i class="fa fa-phone"></i> 010-020-0340</p>
+        <p><i class="fa fa-envelope"></i> info@company.com</p>
+      </div>
+
+      <div>
+        <h3>Products</h3>
+        <div class="split-hr"><span></span></div>
+        <ul>
+          <li>Luxury</li>
+          <li>Sport Wear</li>
+          <li>Men’s Shoes</li>
+          <li>Women’s Shoes</li>
+          <li>Popular Dress</li>
+          <li>Gym Accessories</li>
+          <li>Sport Shoes</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>More Info</h3>
+        <div class="split-hr"><span></span></div>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Shop Locations</li>
+          <li>FAQs</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split-hr"><span></span></div>
+
+    <div>
+      <span><i class="fab fa-instagram"></i></span>
+      <span><i class="fab fa-twitter"></i></span>
+      <span><i class="fa-brands fa-facebook"></i></span>
+      <span><i class="fab fa-linkedin"></i></span>
+    </div>
+
+    <div class="form-container">
+      <form>
+        <fieldset>
+          <label for="email">
+            Email address:
+            <input type="email" id="email" name="email" required />
+          </label>
+          <br><br>
+          <button class="email-btn" type="submit">Subscribe</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2021 Company Name | Designed by TemplateMo</p>
+    </div>
+  </footer>
+
+</body>
+</html>

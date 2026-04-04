@@ -1,0 +1,96 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --card-bg: #ffffff;
+  --text-title: #111827;
+  --text-body: #374151;
+  --text-muted: #6b7280;
+  --border-light: #e5e7eb;
+
+  --success-bg: #d1fae5;
+  --success-text: #065f46;
+
+  --warning-bg: #fef3c7;
+  --warning-text: #92400e;
+
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  --radius-lg: 16px;
+  --radius-sm: 6px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-title);
+}
+
+.card p {
+  margin: 8px 0;
+  color: var(--text-body);
+}
+
+/* =========================
+   EVENT LIST
+========================= */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: background-color 0.25s ease;
+}
+
+.event-list li:hover {
+  background-color: #f3f4f6;
+}
+
+.event-date {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.status {
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+.status.confirmed {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.status.pending {
+  background-color: var(--warning-bg);
+  color: var(--warning-text);
+}

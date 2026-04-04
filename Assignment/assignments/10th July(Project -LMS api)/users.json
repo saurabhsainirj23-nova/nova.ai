@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Alice Admin",
+    "email": "alice@lms.com",
+    "role": "admin"
+  },
+  {
+    "name": "Bob Instructor",
+    "email": "bob@lms.com",
+    "role": "instructor"
+  },
+  {
+    "name": "Charlie Student",
+    "email": "charlie@lms.com",
+    "role": "student"
+  },
+  {
+    "name": "Daisy Student",
+    "email": "daisy@lms.com",
+    "role": "student"
+  }
+]

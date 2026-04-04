@@ -1,0 +1,17 @@
+.product-card {
+  background-color: skyblue;
+  border-radius: 12px;
+  padding: 50px;
+  width: 250px;
+  margin: 45px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  color: black;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}

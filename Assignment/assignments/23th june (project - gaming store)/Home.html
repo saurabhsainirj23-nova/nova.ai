@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyborg Gaming</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  color: #e754b5;
+  font-weight: bold;
+}
+
+.search input {
+  background-color: #2d2d2d;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  color: #ccc;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #e754b5;
+}
+
+.profile-icon img {
+  height: 32px;
+  border-radius: 50%;
+}
+
+.outer-box-0 {
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 70px;
+  width: 190vh;
+  height: 250vh;
+  max-width: 500vh;
+  max-height: 500vh;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 60px;
+background-image: url('banner-bg.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 60vh;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #e754b5;
+}
+
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  background-color: #e754b5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #d23e9b;
+}
+
+    .stream-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 15px;
+    }
+
+    .text-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .game-title {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .right-stats-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 14px;
+      gap: 4px;
+      color: #ddcf07;
+    }
+
+.details {
+  color: #ff00d9;
+}
+
+
+
+    .right-stats i {
+      margin-right: 5px;
+    }
+
+    .stats {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .stats li i {
+      margin-right: 6px;
+    }
+
+.library-header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.btn-Discover{
+  display: flex;
+  justify-content: center;
+  background-color: #ff4ecd;
+  border: 2px solid #ff4ecd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 10px;
+  color: white;
+  align-items: center;
+}
+
+
+
+
+
+
+.outer-box-1 {
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 70px;
+  width: 90%;
+  height: auto;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.popular-heading {
+  font-size: 28px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.link-underline {
+  text-decoration: underline;
+  color: white;
+}
+
+
+
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.game-card {
+  background-color: #2b2b2b;
+  border-radius: 15px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.game-card h3 {
+  margin: 8px 0 4px;
+}
+
+.game-card p {
+  margin: 0;
+  color: #bbb;
+}
+
+
+
+
+.library-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #111;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.library-section h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  text-decoration: underline;
+  color: white;
+}
+
+.game-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #2c2c2c;
+  flex-wrap: wrap;
+}
+
+.game-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 2;
+  min-width: 220px;
+}
+
+.game-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.game-info p {
+  color: #999;
+  font-size: 13px;
+  margin: 3px 0 0;
+}
+
+.game-meta {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  color: #bbb;
+}
+
+.download-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #888;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: default;
+  font-size: 14px;
+}
+
+.btn-pink {
+  background-color: transparent;
+  border: 2px solid #ff4ecd;
+  color: #ff4ecd;
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  font-weight: 600;
+}
+
+.btn-grey {
+  background-color: transparent;
+  border: 2px solid #888;
+  color: #aaa;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.library-header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.btn-Library{
+  display: flex;
+  justify-content: center;
+  background-color: #ff4ecd;
+  border: 2px solid #ff4ecd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 10px;
+  color: white;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  margin: 60px 0 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+</style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Type Something" />
+    </div>
+    <nav class="nav-links">
+      <a href="Home.html" class="active">Home</a>
+      <a href="Browse.html">Browse</a>
+      <a href="Details.html">Details</a>
+      <a href="Streams.html">Streams</a>
+      <a href="Profile.html" class="profile-icon">
+        <img src="profile-header.jpg" alt="Profile" />
+      </a>
+    </nav>
+  </header>
+<div class="outer-box-0">
+  <div class="hero-section">
+  <div class="hero-text">
+        <p>Welcome To Cyborg</p>
+        <h1><span>BROWSE</span> OUR POPULAR <br />GAMES HERE</h1>
+        <button>Browse Now</button>
+        <div class="hero-image">
+      </div>
+  </div>
+</div>
+
+
+
+<div class="outer-box-1">
+<h2 class="popular-heading">
+  <span class="link-underline">Most Popular</span> Right Now
+</h2>
+
+
+<section class="game-grid">
+    <div class="game-card">
+      <img src="popular-01.jpg" alt="Fortnite">
+<div class="stream-info">
+            <div class="text-info">
+              <h4>Fortnite</h4>
+              <span class="game-title">Sandbox</span>
+            </div>
+            <div class="right-stats-1">
+              <span><i class="fas fa-star"></i> 4.8</span>
+              <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+            </div>
+          </div>
+    </div>
+
+<div class="game-card">
+  <img src="popular-02.jpg" alt="PubG">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>PubG</h4>
+      <span class="game-title">Battle S</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="game-card">
+  <img src="popular-03.jpg" alt="Dota2">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>Dota2</h4>
+      <span class="game-title">Steam-X</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+<div class="game-card">
+  <img src="popular-04.jpg" alt="CS-GO">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>CS-GO</h4>
+      <span class="game-title">Legendary</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+<div class="game-card">
+  <img src="popular-05.jpg" alt="Mini Craft">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>Mini Craft</h4>
+      <span class="game-title">Legendary</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+<div class="game-card">
+  <img src="popular-06.jpg" alt="Eagles Fly">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>Eagles Fly</h4>
+      <span class="game-title">Matrix Games</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+<div class="game-card">
+  <img src="popular-07.jpg" alt="Warface">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>Warface</h4>
+      <span class="game-title">Max 3D</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+
+<div class="game-card">
+  <img src="popular-08.jpg" alt="Warcraft">
+  <div class="stream-info">
+    <div class="text-info">
+      <h4>Warcraft</h4>
+      <span class="game-title">Legend</span>
+    </div>
+    <div class="right-stats-1">
+      <span><i class="fas fa-star"></i> 4.8</span>
+      <span class="details"><i class="fas fa-download"></i> 2.3M</span>
+    </div>
+  </div>
+</div>
+      <div class="library-header">
+    <button class="btn-Discover">Discover Popular</button>
+  </div>
+  </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="outer-box-2">
+  <div class="library-section">
+    <h2><span class="highlight">Your Gaming</span> Library</h2>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-01.jpg" alt="Dota 2">
+        <div>
+          <strong>Dota 2</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>24/08/2036</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>634 H 22 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="download-btn">Downloaded</button></div>
+    </div>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-02.jpg" alt="Fortnite">
+        <div>
+          <strong>Fortnite</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>22/06/2036</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>745 H 22 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="btn-pink">Downloaded</button></div>
+    </div>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-03.jpg" alt="CS-GO">
+        <div>
+          <strong>CS-GO</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>21/04/2022</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>632 H 46 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="download-btn">Downloaded</button></div>
+    </div>
+      <div class="library-header">
+    <button class="btn-Library">View Your Library</button>
+  </div>
+  </div>
+
+
+</div>
+</div>
+  <footer>
+    <p>Copyright © 2036 Cyborg Gaming Company. All rights reserved.</p>
+    <p>Design: TemplateMo</p>
+  </footer>
+
+</body>
+</html>

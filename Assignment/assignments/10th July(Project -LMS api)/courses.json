@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Web Development Bootcamp",
+    "description": "Learn HTML, CSS, JavaScript, and modern frontend frameworks.",
+    "instructor": "ObjectId('PASTE_BOB_ID_HERE')"
+  },
+  {
+    "title": "Data Structures in JS",
+    "description": "Understand core data structures like stacks, queues, trees, and graphs.",
+    "instructor": "ObjectId('PASTE_BOB_ID_HERE')"
+  }
+]

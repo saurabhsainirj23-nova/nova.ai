@@ -1,0 +1,15 @@
+.weather-card {
+  width: 100%;
+}
+
+.weather-card .card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather-card .weather-icon {
+  width: auto;
+  height: auto;
+}

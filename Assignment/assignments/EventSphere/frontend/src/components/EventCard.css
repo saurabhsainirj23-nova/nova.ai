@@ -1,0 +1,99 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --card-bg: #ffffff;
+  --card-border: #ddd;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  --text-title: #2c3e50;
+  --text-body: #555;
+
+  --success: #4caf50;
+  --success-hover: #45a049;
+
+  --primary: #2196f3;
+  --primary-hover: #0b7dda;
+
+  --disabled: #cccccc;
+}
+
+/* =========================
+   EVENT CARD
+========================= */
+.event-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   TEXT
+========================= */
+.event-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-title);
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: var(--text-body);
+  margin: 0.25rem 0;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+.event-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.event-card button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.event-card button:hover:not(.registered-btn) {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   BUTTON STATES
+========================= */
+.event-card .register-btn {
+  background-color: var(--success);
+  color: #fff;
+}
+
+.event-card .register-btn:hover {
+  background-color: var(--success-hover);
+}
+
+.event-card .ticket-btn {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.event-card .ticket-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.event-card .registered-btn {
+  background-color: var(--disabled);
+  cursor: not-allowed;
+}

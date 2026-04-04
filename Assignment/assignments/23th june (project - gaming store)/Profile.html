@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1b1b1b;
+  color: white;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  color: #e754b5;
+  font-weight: bold;
+}
+
+.search input {
+  background-color: #2d2d2d;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  color: #ccc;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #e754b5;
+}
+
+.profile-icon img {
+  height: 32px;
+  border-radius: 50%;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.profile-card {
+  background-color: #222;
+  border-radius: 20px;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-info h2 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: #aaa;
+  font-size: 14px;
+  margin: 10px 0 20px;
+  max-width: 300px;
+}
+
+
+.status {
+  background-color: #f45a8d;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.live-btn {
+  background: transparent;
+  border: 1px solid #f45a8d;
+  color: #f45a8d;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  background-color: #1a1a1a;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.profile-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 500px;
+}
+
+
+.profile-stats p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  max-width: 320px; 
+  padding: 16px 0;
+  border-bottom: px solid white; 
+  color: white;
+  font-size: 18px;
+}
+
+
+.label {
+  text-align: left;
+}
+
+
+.value {
+  font-weight: bold;
+  color: #ff4ecd;
+  text-align: right;
+  min-width: 60px;
+}
+
+
+.value.none {
+  color: gray;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+.library-header {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.btn-Library{
+  display: flex;
+  justify-content: center;
+  background-color: #ff4ecd;
+  border: 2px solid #ff4ecd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 10px;
+  color: white;
+  align-items: center;
+}
+
+
+
+
+.Load-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn-Load{
+  display: flex;
+  justify-content: center;
+  background-color: #ff4ecd;
+  border: 2px solid #ff4ecd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin: 10px;
+  color: white;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.profile-stats {
+  background-color: #2f2d2c;
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 200px;
+}
+
+.profile-stats p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #aaa;
+}
+
+.profile-stats span {
+  color: #f45a8d;
+  font-weight: bold;
+}
+
+.profile-stats .none {
+  color: #e55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clip-title {
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+.clip-title span {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 40px;
+}
+
+.clips-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #f06292;
+  text-decoration: underline;
+}
+
+.clips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.clip-card {
+  background-color: #2a2a2a;
+  border-radius: 16px;
+  padding: 15px;
+  width: 220px;
+  text-align: center;
+}
+
+.thumbnail {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  background-color: white;
+  color: #f06292;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  
+}
+
+.clip-card h3 {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.views {
+  display: flex; 
+  justify-content: space-between;
+  font-size: 15px;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.see {
+  display: flex; 
+  justify-content:left;
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin-top: 5px;
+  gap: 10px; 
+color:  #f06292;
+}
+
+.load-more {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #f06292;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.load-more:hover {
+  background-color: #e04879;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.outer-box-0 {
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 70px;
+  width: 200vh;
+  height: 200vh;
+  max-width: 900vh;
+  max-height: 1000vh;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.library-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #111;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.library-section h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  text-decoration: underline;
+  color: white;
+}
+
+.game-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #2c2c2c;
+  flex-wrap: wrap;
+}
+
+.game-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 2;
+  min-width: 220px;
+}
+
+.game-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.game-info p {
+  color: #999;
+  font-size: 13px;
+  margin: 3px 0 0;
+}
+
+.game-meta {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  color: #bbb;
+}
+
+.download-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #888;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: default;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin: 60px 0 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Type Something" />
+    </div>
+    <nav class="nav-links">
+      <a href="Home.html" class="active">Home</a>
+      <a href="Browse.html">Browse</a>
+      <a href="Details.html">Details</a>
+      <a href="Streams.html">Streams</a>
+  <a href="Profile.html" class="profile-icon">
+    <img src="profile-header.jpg" alt="Profile" />
+  </a>
+    </nav>
+  </header>
+<div class="outer-box-0">
+  <div class="profile-container">
+    <div class="profile-card">
+      <img src="profile.jpg" alt="VR User" class="profile-img">
+      <div class="profile-info">
+        <button class="status">Offline</button>
+        <h2>Alan Smithee</h2>
+        <p>You Haven’t Gone Live yet. Go Live By Touching The Button Below.</p>
+        <button class="live-btn">Start Live Stream</button>
+      </div>
+
+
+
+
+
+<div class="profile-stats">
+  <ul class="list-group">
+                <li class="list-group-item bg-dark text-white d-flex justify-content-between">
+  <p><span class="label">Games Downloaded</span><span class="value">3</span></p>
+  <p><span class="label">Friends Online</span><span class="value">16</span></p>
+  <p><span class="label">Live Streams</span><span class="value none">None</span></p>
+  <p><span class="label">Clips</span><span class="value">29</span></p>
+                </li>
+  </ul>
+</div>
+    <h3 class="clip-title"><span>Your Most Popular</span> Clips</h3>
+    
+
+  <section class="clips-section">
+    <div class="clips-container">
+      
+      <div class="clip-card">
+        <div class="thumbnail">
+          <img src="clip-01.jpg" alt="First Clip">
+          <div class="play-btn">&#9658;</div>
+        </div>
+        <h3 class="views">First Clip</h3>
+        <p class="see">&#128065; 250</p>
+      </div>
+
+      
+      <div class="clip-card">
+        <div class="thumbnail">
+          <img src="clip-02.jpg" alt="Second Clip">
+          <div class="play-btn">&#9658;</div>
+        </div>
+        <h3 class="views">Second Clip</h3>
+        <p class="see">&#128065; 183</p>
+      </div>
+
+      
+      <div class="clip-card">
+        <div class="thumbnail">
+          <img src="clip-03.jpg" alt="Third Clip">
+          <div class="play-btn">&#9658;</div>
+        </div>
+        <h3 class="views">Third Clip</h3>
+        <p class="see">&#128065; 141</p>
+      </div>
+
+      
+      <div class="clip-card">
+        <div class="thumbnail">
+          <img src="clip-04.jpg" alt="Fourth Clip">
+          <div class="play-btn">&#9658;</div>
+        </div>
+        
+        <h3 class="views">Fourth Clip</h3>
+        <p class="see">&#128065; 91</p>
+      </div>
+    </div>
+<div class="Load-header">
+    <button class="btn-Load">Load More Clips</button>
+  </section>
+  </div>
+</div>
+</div>
+
+
+
+  <div class="library-section">
+    <h2><span class="highlight">Your Gaming</span> Library</h2>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-01.jpg" alt="Dota 2">
+        <div>
+          <strong>Dota 2</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>24/08/2036</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>634 H 22 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="download-btn">Downloaded</button></div>
+    </div>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-02.jpg" alt="Fortnite">
+        <div>
+          <strong>Fortnite</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>22/06/2036</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>745 H 22 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="download-btn">Downloaded</button></div>
+    </div>
+
+    <div class="game-row">
+      <div class="game-info">
+        <img src="game-03.jpg" alt="CS-GO">
+        <div>
+          <strong>CS-GO</strong>
+          <p>Sandbox</p>
+        </div>
+      </div>
+      <div class="game-meta"><h5>Date Added</h5><p>21/04/2022</p></div>
+      <div class="game-meta"><h5>Hours Played</h5><p>632 H 46 Mins</p></div>
+      <div class="game-meta"><h5>Currently</h5><p>Downloaded</p></div>
+      <div><button class="download-btn">Downloaded</button></div>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <p>Copyright © 2036 Cyborg Gaming Company. All rights reserved.</p>
+    <p>Design: TemplateMo</p>
+  </footer>
+
+
+</body>
+</html>

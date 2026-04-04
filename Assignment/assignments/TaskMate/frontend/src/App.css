@@ -1,0 +1,84 @@
+/* App.css - GoalOrbit Advanced To-Do List */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f5fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-input button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task-input button:hover {
+  background-color: #4338ca;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef2ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  background: #d1d5db;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #6b7280;
+  font-size: 14px;
+}

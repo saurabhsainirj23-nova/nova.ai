@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Streams</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #1f2122;
+  color: #fff;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  color: #e754b5;
+  font-weight: bold;
+}
+
+.search input {
+  background-color: #2d2d2d;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 250px;
+  color: #ccc;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #e754b5;
+}
+
+.profile-icon img {
+  height: 32px;
+  border-radius: 50%;
+}
+
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+}
+.outer-box-0 {
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 70px;
+  margin: 100px;
+  width: 180vh;
+  height: 400vh;
+  max-width: 500vh;
+  max-height: 500vh;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.outer-box-1 {
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  width: 170vh;
+  height: 90vh;
+  max-width: 500vh;
+  max-height: 500vh;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    h2 em {
+      color: #e75e8d;
+      font-style: normal;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+    }
+
+    .col {
+      flex: 1 1 300px;
+    }
+
+    .stream-card {
+      background-color: #2a2b2e;
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .stream-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .watch-btn {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      background-color: #e75e8d;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .watch-btn:hover {
+      background-color: #fff;
+      color: #e75e8d;
+    }
+
+    .stream-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 15px;
+    }
+
+    .text-info h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .game-title {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .right-stats {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 14px;
+      gap: 4px;
+      color: #ccc;
+    }
+
+    .right-stats i {
+      margin-right: 5px;
+    }
+
+    .stats {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .stats li i {
+      margin-right: 6px;
+    }
+
+.top-downloaded {
+  flex: 1;
+  background-color: #121212;
+  border-radius: 16px;
+  padding: 10px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.top-downloaded ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.top-downloaded li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.top-downloaded img {
+  width: 30px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.top-downloaded .text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.top-downloaded h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+.top-downloaded small {
+  color: #aaa;
+  font-size: 13px;
+  width: 100%;
+}
+
+.top-downloaded .meta {
+  font-size: 14px;
+  color: #ccc;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+
+.download-btn {
+  background-color: #2e2e2e;
+  border: none;
+  border-radius: 50%;
+  color: #ec5f9e;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-all {
+  display: block;
+  margin-top: 10px;
+  color: #ec5f9e;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  background: linear-gradient(90deg, #1f2122, #2a2c2d);
+}
+.banner-text {
+  max-width: 600px;
+}
+.banner-text h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+.banner-text p {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.banner-img img {
+  width: 500px;
+  border-radius: 20px;
+}
+
+/* Game Cards Section */
+.section-heading {
+  font-size: 26px;
+  padding: 40px 60px 20px;
+  color: #fff;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 60px 60px;
+}
+.card {
+  background-color: #27292a;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h4 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.card-body span {
+  color: #ec6090;
+  font-size: 14px;
+}
+
+
+footer {
+  background-color: #27292a;
+  padding: 30px 60px;
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+.btn {
+  background-color: #ec6090;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background-color: #ff4475;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .banner-img img {
+    width: 90%;
+    margin-top: 30px;
+  }
+}
+
+
+.outer-box-2 {
+  background-color: #363636;
+  border-radius: 20px;
+  padding: 90px;
+  width: 185vh;
+  height: 140vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+.popular-section {
+  padding: 60px;
+  background-color: #1f2122;
+}
+
+.popular-section h2 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.popular-section .highlight {
+  color: #ec6090;
+}
+
+.stream-grid {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.stream-card {
+  background-color: #27292a;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.stream-card:hover {
+  transform: translateY(-10px);
+}
+
+.stream-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.stream-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.stream-info .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.stream-info .name {
+  color: #fff;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.stream-info p {
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  margin: 60px 0 20px;
+  color: #777;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" />
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Type Something" />
+    </div>
+    <nav class="nav-links">
+      <a href="Home.html" class="active">Home</a>
+      <a href="Browse.html">Browse</a>
+      <a href="Details.html">Details</a>
+      <a href="Streams.html">Streams</a>
+  <a href="Profile.html" class="profile-icon">
+    <img src="profile-header.jpg" alt="Profile" />
+  </a>
+    </nav>
+  </header>
+
+  <div class="outer-box-0">
+<div class="outer-box-1">
+  <div class="container">
+    <h2><em>Live</em> Streams</h2>
+
+    <div class="row">
+
+      
+      <div class="col">
+        <div class="stream-card">
+          <div class="image-wrapper">
+            <img src="clip-01.jpg" alt="Fortnite" />
+            <a href="#watch" class="watch-btn">Watch</a>
+          </div>
+          <div class="stream-info">
+            <div class="text-info">
+              <h4>StreamerOne</h4>
+              <span class="game-title">Fortnite</span>
+            </div>
+            <div class="right-stats">
+              <span class="rating">⭐ 4.8</span>
+              <span class="downloads"><i class="fas fa-download"></i> 2.3M</span>
+            </div>
+          </div>
+          <ul class="stats">
+            <li><i class="fas fa-user"></i> 2.5K viewers</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="stream-card">
+          <div class="image-wrapper">
+            <img src="clip-02.jpg" alt="CS-GO" />
+            <a href="#watch" class="watch-btn">Watch</a>
+          </div>
+          <div class="stream-info">
+            <div class="text-info">
+              <h4>ProPlayer</h4>
+              <span class="game-title">CS-GO</span>
+            </div>
+            <div class="right-stats">
+              <span class="rating">⭐ 4.6</span>
+              <span class="downloads"><i class="fas fa-download"></i> 1.9M</span>
+            </div>
+          </div>
+          <ul class="stats">
+            <li><i class="fas fa-user"></i> 249K viewers</li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="stream-card">
+          <div class="image-wrapper">
+            <img src="clip-03.jpg" alt="Gamezer" />
+            <a href="#watch" class="watch-btn">Watch</a>
+          </div>
+          <div class="stream-info">
+            <div class="text-info">
+              <h4>GameZer</h4>
+              <span class="game-title">Pool</span>
+            </div>
+            <div class="right-stats">
+              <span class="rating">⭐ 4.7</span>
+              <span class="downloads"><i class="fas fa-download"></i> 3.0M</span>
+            </div>
+          </div>
+          <ul class="stats">
+            <li><i class="fas fa-user"></i> 249K viewers</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+    <aside class="top-downloaded">
+      <h2><span>Top</span> Downloaded</h2>
+      <ul>
+        <li>
+          <img src="game-01.jpg" alt="Fortnite" />
+          <div>
+            <h4>Fortnite</h4>
+            <small>Sandbox</small>
+            <div class="meta">
+              <span>⭐ 4.9</span>
+              <span><i class="fas fa-download"></i> 2.2M</span>
+            </div>
+          </div>
+          <button class="download-btn"><i class="fas fa-download"></i></button>
+        </li>
+        <li>
+          <img src="game-02.jpg" alt="CS-GO" />
+          <div>
+            <h4>CS-GO</h4>
+            <small>Legendary</small>
+            <div class="meta">
+              <span>⭐ 4.9</span>
+              <span><i class="fas fa-download"></i> 2.2M</span>
+            </div>
+          </div>
+          <button class="download-btn"><i class="fas fa-download"></i></button>
+        </li>
+        <li>
+          <img src="game-03.jpg" alt="PugG" />
+          <div>
+            <h4>PugG</h4>
+            <small>Battle Royale</small>
+            <div class="meta">
+              <span>⭐ 4.9</span>
+              <span><i class="fas fa-download"></i> 2.2M</span>
+            </div>
+          </div>
+          <button class="download-btn"><i class="fas fa-download"></i></button>
+        </li>
+      </ul>
+      <a href="#" class="view-all">View All Games</a>
+    </aside>
+</div>
+
+
+
+
+
+
+  
+ <div class="outer-box-2">
+  <h2><span class="highlight">Most Popular</span> Live Stream</h2>
+  <div class="stream-grid">
+    <div class="stream-card">
+      <img src="stream-05.jpg" alt="Stream 1">
+      <div class="stream-info">
+        <img class="avatar" src="avatar1.jpg" alt="Kengan Omeg">
+        <div>
+          <span class="name">Kengan Omeg</span>
+          <p>Just Talking With Fans</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-06.jpg" alt="Stream 2">
+      <div class="stream-info">
+        <img class="avatar" src="avatar2.jpg" alt="LahutaMalc">
+        <div>
+          <span class="name">LahutaMalc</span>
+          <p>CS-GO 36 Hours Live Stream</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-07.jpg" alt="Stream 3">
+      <div class="stream-info">
+        <img class="avatar" src="avatar3.jpg" alt="Areluwa">
+        <div>
+          <span class="name">Areluwa</span>
+          <p>Maybe Nathej Allnight Chillin'</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-08.jpg" alt="Stream 4">
+      <div class="stream-info">
+        <img class="avatar" src="avatar4.jpg" alt="NewGangTeam">
+        <div>
+          <span class="name">NewGangTeam</span>
+          <p>Live Streaming Till Morning</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stream-grid">
+    <div class="stream-card">
+      <img src="stream-05.jpg" alt="Stream 1">
+      <div class="stream-info">
+        <img class="avatar" src="avatar1.jpg" alt="Kengan Omeg">
+        <div>
+          <span class="name">Kengan Omeg</span>
+          <p>Just Talking With Fans</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-06.jpg" alt="Stream 2">
+      <div class="stream-info">
+        <img class="avatar" src="avatar2.jpg" alt="LahutaMalc">
+        <div>
+          <span class="name">LahutaMalc</span>
+          <p>CS-GO 36 Hours Live Stream</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-07.jpg" alt="Stream 3">
+      <div class="stream-info">
+        <img class="avatar" src="avatar3.jpg" alt="Areluwa">
+        <div>
+          <span class="name">Areluwa</span>
+          <p>Maybe Nathej Allnight Chillin'</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-card">
+      <img src="stream-08.jpg" alt="Stream 4">
+      <div class="stream-info">
+        <img class="avatar" src="avatar4.jpg" alt="NewGangTeam">
+        <div>
+          <span class="name">NewGangTeam</span>
+          <p>Live Streaming Till Morning</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+  <footer>
+    <p>Copyright © 2036 Cyborg Gaming Company. All rights reserved.</p>
+    <p>Design: TemplateMo</p>
+  </footer>
+
+</body>
+</html>

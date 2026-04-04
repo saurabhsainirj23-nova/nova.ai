@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    <title>Pomodoro Timer</title> 
+    <link rel="stylesheet" href="style.css"> 
+  </head> 
+  <body> 
+    <div class="container"> 
+      <h1>🍅 Pomodoro Timer</h1>
+
+<div class="settings">
+  <label>Work: <input type="number" id="workInput" value="25" /></label>
+  <label>Short Break: <input type="number" id="shortInput" value="5" /></label>
+  <label>Long Break: <input type="number" id="longInput" value="15" /></label>
+  <label>Cycles: <input type="number" id="cycleInput" value="4" /></label>
+  <button id="applySettingsBtn">Apply Settings</button>
+</div>
+
+<div id="sessionType">Session: Work</div>
+<div id="countdown">25:00</div>
+
+<div class="controls">
+  <button id="startBtn">Start</button>
+  <button id="pauseBtn">Pause</button>
+  <button id="resetBtn">Reset</button>
+</div>
+
+<div id="pomodoroProgress">⚪ ⚪ ⚪ ⚪</div>
+</div> <script src="script.js"></script> 
+</body> 
+</html>

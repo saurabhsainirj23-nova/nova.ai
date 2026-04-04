@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make-admin": "node scripts/makeAdmin.js",
+    "check-user-role": "node scripts/checkUserRole.js",
+    "update-admin": "node -e \"const mongoose = require('mongoose'); const dotenv = require('dotenv'); dotenv.config(); mongoose.connect(process.env.MONGO_URI).then(async () => { console.log('Connected to MongoDB'); const User = mongoose.model('User', new mongoose.Schema({ name: String, email: String, role: String, password: String, preferences: Object, createdAt: Date, updatedAt: Date })); const user = await User.findOne({email: process.argv[2]}); if(user) { user.role = 'admin'; await user.save(); console.log('User updated to admin role:'); console.log(user); } else { console.log('User not found'); } mongoose.connection.close(); }).catch(err => console.error('Error:', err));\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "qrcode": "^1.5.4",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Build Personal Portfolio",
+    "dueDate": "2025-08-01T00:00:00.000Z",
+    "course": "ObjectId('PASTE_WEBDEV_COURSE_ID_HERE')"
+  },
+  {
+    "title": "Implement Stack using JS",
+    "dueDate": "2025-08-05T00:00:00.000Z",
+    "course": "ObjectId('PASTE_DS_COURSE_ID_HERE')"
+  }
+]
